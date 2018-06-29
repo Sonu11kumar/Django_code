@@ -1,0 +1,18 @@
+{% extends 'music/base.html' %}
+
+ {% block content %}
+
+ <!--<h1>Form</h1>
+ <form method="post" action="" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create Post" />
+ </form>-->
+<div class = 'col-sm-6 col-sm-offset-3'>
+ <h1>Sign In Here</h1>
+ <form method="post" action="" enctype="multipart/form-data">{% csrf_token %}
+    {{ form1.as_p }}
+    <input type="submit" value="Submit" />
+ </form>
+</div>
+ {% endblock content %}
+

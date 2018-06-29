@@ -1,0 +1,7 @@
+{% extends 'music/base.html' %}
+{% load static from staticfiles %}
+
+{% block content3 %}
+    <h1>Thank you for your purchase!</h1>
+    <a href="{% url 'music:product-list' %}">Head back home</a>
+{% endblock content3 %}

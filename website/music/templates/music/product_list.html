@@ -1,0 +1,30 @@
+{% extends 'music/base.html' %}
+{% load static from staticfiles %}
+
+
+{% block content4 %}
+<div class="container">
+    <h1>this is Product</h1>
+    {{ message }}
+    <div class="row">
+    {% for object in object_list %}
+        <div class="col-sm-3 thumbnail">
+            {% if object.image %}
+     <img src="{{ object.image.url }}" class="img-responsive" />
+    {% endif %}
+            <p>{{ object.name }}</p>
+            <p>Price: ${{ object.price }}</p>
+            {% if object in user.profile.ebooks.all %}
+            <!-- add a button here to see the product -->
+            You own this
+            {% elif object in current_order_products %}
+            <a href="{% url 'music:order_summary' %}" class="btn btn-warning aline=centre">Go to Cart</a>
+            {% else %}
+            <a href="{% url 'music:add_to_cart' object.id %}" class="btn btn-warning">Add to Cart</a>
+            {% endif %}
+        </div>
+
+    {% endfor %}
+    </div>
+</div>
+{% endblock content4 %}

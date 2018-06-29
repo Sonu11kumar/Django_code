@@ -1,0 +1,30 @@
+{% extends 'music/base.html' %}
+{% load i18n %}
+
+{% block cont %}
+
+{% for obj in object_sets %}
+  <div class="col-sm-6 col-sm-3">
+      {% if obj.image %}
+     <img src="{{ obj.image.url }}" class="img-responsive" />
+    {% endif %}
+   <a href= "{% url 'music:single' pk=obj.id %}" > {{obj.title}} </a>
+    {{ obj.id }}<br>
+    {{ obj.title }}<br>
+    {{ obj.updated }}<br>
+  </div>
+    {% endfor %}
+
+
+<ul>
+    {% if plane.image %}
+     <img src="{{ plane.image.url }}" class="img-responsive" />
+    {% endif %}
+    <h1><small>{{title}}</small></h1>
+    {{ plane.id }}<br>
+    {{ plane.title }}<br>
+    {{ plane.updated }}<br>
+</ul>
+</body>
+</html>
+{% endblock cont %}

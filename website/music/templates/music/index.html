@@ -1,0 +1,81 @@
+{% extends 'music/base.html' %}
+{% load static from staticfiles %}
+
+
+<!--<ul>
+    {% for album in all_albums %}
+    <li><a href= "{% url 'music:details' album.id %}" > {{album.genre}} </a> </li>
+    {% endfor %}
+</ul>
+
+
+<h2><small>{{title}}</small></h2>
+    {{ plane.id }}<br>
+    {{ plane.title }}<br>
+    {{ plane.updated }}<br>   -->
+
+
+{% block gallery %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Best Restaurants in Chambéry, Savoie</h2>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="{% static 'images/indian.jpg' %}" class="thumbnail">
+                <p>Indian</p>
+                <img src="{% static 'images/indian.jpg' %}" >
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="{% static 'images/french_foods.jpg' %}" class="thumbnail">
+                <p>French</p>
+                <img src="{% static 'images/french_foods.jpg' %}" />
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="{% static 'images/french_foods.jpg' %}" class="thumbnail">
+                <p>Italian</p>
+                <img src="{% static 'images/italian_foods.jpg' %}" />
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="{% static 'images/french_foods.jpg' %}" class="thumbnail">
+                <p>Sushi</p>
+                <img src="{% static 'images/sushi_foods.jpg' %}" />
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="{% static 'images/asian_foods.jpg' %}" class="thumbnail">
+                <p>Asian</p>
+                <img src="{% static 'images/asian.jpg' %}" />
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="{% static 'images/sushi_foods.jpg' %}" class="thumbnail">
+                <p>Japanese</p>
+                <img src="{% static 'images/japanese_foods.jpg' %}" />
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock gallery %}
+
+
+
+
+
+
+
+
+
+
+
+
